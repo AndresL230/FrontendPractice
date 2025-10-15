@@ -1,0 +1,353 @@
+@font-face {
+    font-family: Oswald;
+    src: url(fonts/Oswald-Regular.ttf);
+}
+
+@media screen and (max-width:600px){
+    aside, section, article{
+        width: 100%;
+    }
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.gallery{
+    display: inline-block;
+    padding: 5px;
+    border: 5px solid hsla(0, 2%, 16%, 0.498);
+    margin: 5px;
+    width: 200px;
+}
+
+.gallery .description{
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-family: Oswald, arial;
+}
+
+.gallery:hover{
+    border: 5px solid hsla(0, 0%, 0%, 0.674);
+}
+
+.gallery img{
+    width: 100%;
+    height: auto;
+}
+
+footer{
+    background-color: gray;
+    text-align: center;
+    padding: 25px;
+    display: block;
+    clear: both;
+    color: white;
+    font-family: Oswald, arial;
+    font-weight: light;
+}
+
+h1{
+    text-align: center;
+}
+
+aside{
+    width: 20%;
+    float: left;
+    padding: 10px;
+}
+
+section{
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+
+article{
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: gray;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar li{
+    float: left;
+}
+
+.pagination{
+    text-align: center;
+}
+
+.pagination a{
+    color: black;
+    text-decoration: None;
+    padding: 8px 15px;
+    display: inline-block;
+}
+
+.pagination a.active{
+    background-color: orange;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+}
+
+.pagination a:hover:not(.active){
+    background-color: gray;
+    border-radius: 5px;
+}
+
+a:link{
+    color: hsl(195, 53%, 79%);
+}
+
+a:hover{
+    color: hsl(195, 64%, 66%);
+    font-size: 1em;
+    background-color: rgb(125, 158, 169);
+}
+
+a:active{
+    color: hsl(240, 100%, 27%);
+}
+
+a:visited{
+    color: orange;
+}
+
+/* li:hover{
+    background-color: yellowgreen;
+}
+
+li:not(:hover){
+    background-color: rgb(82, 113, 144);
+}
+
+li:nth-child(3n+1){
+    background-color: yellow;
+} */
+
+#greeting p{
+    background-color: lightblue;
+    padding: 10px;
+    display: none;
+}
+
+#greeting:hover p{
+    display: block;
+}
+
+body{
+    background-color: slategray;
+}
+
+.div{
+    background-color: rgb(234, 161, 3);
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+.span{
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    visibility: hidden;
+}
+
+.box{
+    border: 5px solid;
+    font-size: 5em;
+    width: 250px;
+    height: 250px;
+    margin: 50px;
+    box-shadow: 10px 10px 20px;
+}
+
+#box2:hover{
+    animation-name: glow;
+    animation-duration: 2s;
+}
+
+@keyframes slideLeft{
+    from{transform: translateX(300%);}
+}
+
+@keyframes slideRight{
+    to{transform: translateX(300%);}
+}
+
+@keyframes slideUp{
+    from{transform: translateY(300%);}
+}
+
+@keyframes rotate{
+    50%{transform: rotatez(360deg);}
+}
+
+@keyframes grow{
+    50%{transform: scale(2,2);}
+}
+
+@keyframes shrink{
+    50%{transform: scale(0.5,0.5);}
+}
+
+@keyframes fade{
+    50%{opacity: 0}
+}
+
+@keyframes colorChange{
+    0%{background-color: rgb(159, 9, 9);}
+    20%{background-color: rgb(159, 124, 9);}
+    40%{background-color: rgb(62, 159, 9);}
+    60%{background-color: rgb(9, 134, 159);}
+    80%{background-color: rgb(27, 9, 159);}
+    100%{background-color: rgb(154, 9, 159);}
+}
+
+@keyframes glow{
+    50%{box-shadow: 0 0 50px yellow;}
+}
+
+.box2{
+    border: 2px solid;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.box3{
+    width: 150px;
+    height: 150px;
+    font-size: 8em;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#box1{
+    background-color: rgb(159, 9, 9);
+    margin-left: auto;
+    animation-name: colorChange;
+    animation-duration: 4s;
+}
+
+#box2{
+    background-color: rgb(0, 128, 255);
+    animation-name: slideRight;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-timing-function: linear;
+}
+
+#box3{
+    background-color: rgb(253, 161, 41);
+    margin: auto;
+    animation-name: slideUp;
+    animation-duration: 1s; 
+    transform: translate(100px, 0) rotate(90deg) scale(0.5);
+}
+
+#box4{
+    background-color: hsla(0, 83%, 53%, 0.733);
+}
+
+#box5{
+    background-color: rgba(255, 255, 0, 0.808);
+    order: 1;
+}
+
+#box6{
+    background-color: rgba(7, 159, 7, 0.758);
+}
+
+#box7{
+    background-color: hsl(180, 100%, 50%);
+}
+
+#posList{
+    line-height: 35px;
+}
+
+.container{
+    display: flex;
+    border: 5px solid black;
+    height: 90vh;
+    flex-wrap: wrap;
+}
+
+#container{
+    border: 2px solid;
+}
+
+#container p{
+    background-color: green;
+}
+
+#container + p{
+    background-color: rgb(165, 99, 42);
+}
+
+h1{
+    color: white;
+    font-family: Oswald, arial;
+    font-weight: light;
+    border-style: solid;
+    border-width: 2px;
+    border-color: hsl(from rgb(201, 9, 185) h s l);
+    text-shadow: 3px 3px 4px red, -3px -3px 4px black;
+    border-radius: 4px;
+}
+
+p{
+    color: white;
+    font-family: "Oswald", "courier new";
+    font-size: 1em;
+    padding: 10px;
+}
+
+#img1{
+    float: left;
+    margin: 10px;
+}
+
+#img2{
+    float: right;
+    margin-left: 10px;
+
+}
+
+.one{
+    color: orange;
+    font-weight: light;
+    border: 2px solid black;
+    display: flow-root;
+}
+
+.two{
+    font-weight: bold;
+    font-style: italic;
+    border-left: 2px double orange;
+    display: flow-root;
+}
